@@ -6,10 +6,7 @@ from sqlalchemy import Integer, String, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from paralympics import db
 
-class User(db.Model):
-    id: Mapped[int] = mapped_column(db.Integer, primary_key=True)
-    email: Mapped[str] = mapped_column(db.Text, unique=True, nullable=False)
-    password: Mapped[str] = mapped_column(db.Text, unique=True, nullable=False)
+
 
 class Region(db.Model):
     __tablename__ = "region"
